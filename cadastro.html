@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Lançamento</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Controle de Despesas Pessoais</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="cadastro.html" class="ativo">Cadastrar</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Novo Lançamento</h2>
+    <form id="form-lancamento">
+      <label for="tipo">Tipo:</label>
+      <select id="tipo" required>
+        <option value="">Selecione</option>
+        <option value="Receita">Receita</option>
+        <option value="Despesa">Despesa</option>
+      </select>
+
+      <label for="descricao">Descrição:</label>
+      <input type="text" id="descricao" required>
+
+      <label for="valor">Valor (R$):</label>
+      <input type="number" id="valor" step="0.01" required>
+
+      <label for="data">Data:</label>
+      <input type="date" id="data" required>
+
+      <button type="submit">Salvar</button>
+    </form>
+
+    <section class="lista">
+      <h3>Lançamentos</h3>
+      <ul id="lista-lancamentos"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Projeto de Programação Web | Desenvolvido por Thiago Minuzzi Batista</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
